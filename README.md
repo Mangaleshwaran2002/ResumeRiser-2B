@@ -1,13 +1,17 @@
-# ResumeRiser-7B
+# ResumeRiser-2B
 
 ## Description
-Welcome to **ResumeRiser-7B**, a fine-tuned version of Microsoft's Phi-2 model (2.7 billion parameters) designed to answer questions about my personal and professional journey. By leveraging **LoRA (Low-Rank Adaptation)** and **4-bit quantization**, this model was tailored using a custom dataset, optimized for efficiency and performance with tools like Hugging Face's Transformers, PEFT, and TRL libraries. This repository showcases the code, model details, and usage instructions for interacting with the fine-tuned model hosted on Hugging Face.
+Welcome to **ResumeRiser-2B**, a fine-tuned version of Microsoft's Phi-2 model (2.7 billion parameters) designed to answer questions about my personal and professional journey. By leveraging **LoRA (Low-Rank Adaptation)** and **4-bit quantization**, this model was tailored using a custom dataset, optimized for efficiency and performance with tools like Hugging Face's Transformers, PEFT, and TRL libraries. This repository showcases the code, model details, and usage instructions for interacting with the fine-tuned model hosted on Hugging Face.
 
 ## Features
 - **Custom Fine-Tuning**: Adapted Phi-2 to provide accurate responses about my academic and professional background.
 - **Efficient Training**: Utilizes LoRA and 4-bit quantization for resource-efficient fine-tuning.
 - **Easy Inference**: Includes sample code to run inference using Hugging Face's Transformers library.
 - **High Performance**: Inherits Phi-2's near state-of-the-art capabilities in common sense, language understanding, and logical reasoning for models under 13 billion parameters.
+
+
+## Screenshot
+https://github.com/user-attachments/assets/1d8f4ec7-a60f-4cd3-85f1-d98e1eba8fbb
 
 ## Getting Started
 
@@ -30,7 +34,7 @@ Below is a sample script to run inference with the fine-tuned model:
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # Specify the model repository
-repo_id = "Mangal-404/phi-2-ResumeRiser-7B"
+repo_id = "Mangal-404/phi-2-ResumeRiser-2B"
 
 # Load the model and tokenizer
 model = AutoModelForCausalLM.from_pretrained(
@@ -39,6 +43,10 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto"
 )
 tokenizer = AutoTokenizer.from_pretrained(repo_id)
+
+
+https://github.com/user-attachments/assets/4935b6c3-d8ed-48c6-8cda-d1b5c470e998
+
 
 # Prepare input
 input_text = "Where did Mangaleshwaran pursue his Master's degree?"
